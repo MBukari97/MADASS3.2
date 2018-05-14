@@ -187,9 +187,15 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         double lat = Double.parseDouble(prefs.getString("lat", "50.9"));
         double lon = Double.parseDouble(prefs.getString("lon", "-1.4"));
-        boolean autodownload = prefs.getBoolean("autodownload", true);
+        boolean autodownload = prefs.getBoolean("Auto-upload", true);
         String restaurantCode = prefs.getString("restaurant", "None");
 
         // do something with the preference data...
+
+        if (autodownload == true){
+            Toast.makeText(this, "Auto-Upload", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Auto-Upload has failed", Toast.LENGTH_SHORT).show();
+        }
     }
 }

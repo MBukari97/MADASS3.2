@@ -13,17 +13,17 @@ public class Preferences extends PreferenceActivity {
         addPreferencesFromResource(R.xml.preferences);
     }
 
-    public void onClick(View v)
-    {
-        Intent intent = new Intent();
-        Bundle bundle=new Bundle();
-        boolean autoload=false;
+    //public void onClick(View v)
+   // {
+     //   Intent intent = new Intent();
+     //   Bundle bundle=new Bundle();
+      //  boolean autoload=false;
 
-        bundle.putBoolean("com.example.autoload",autoload);
-        intent.putExtras(bundle);
-        setResult(RESULT_OK,intent);
-        finish();
+     //   bundle.putBoolean("com.example.autoload",autoload);
+     //   intent.putExtras(bundle);
+      //  setResult(RESULT_OK,intent);
+      //  finish();
 
 
-    }
+   // }
 }
